@@ -1,16 +1,110 @@
-# React + Vite
+# 🌸 Sophia's Cats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="public/logo/sophias-cats-logo.png" width="320" alt="Sophia's Cats">
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <strong>Um jogo educativo em estilo Cozy Pixel Art criado para ajudar crianças a aprender brincando.</strong>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 💖 Sobre o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O **Sophia's Cats** é um jogo educativo desenvolvido em **React** com estética **Cozy Pixel Art**, criado para auxiliar crianças no processo de alfabetização através de atividades lúdicas, personagens carismáticos e recompensas.
 
-## Expanding the ESLint configuration
+O projeto nasceu de um pedido da minha filha, **Sophia**, que queria um jogo de gatinhos para aprender brincando.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A partir dessa ideia surgiu a Mimi, a primeira personagem do jogo e guia da aventura.
+
+---
+
+## ✨ Objetivos
+
+- 📖 Auxiliar na alfabetização.
+- 🔤 Trabalhar reconhecimento de letras e palavras.
+- 🧠 Estimular memória e atenção.
+- ⭐ Recompensar conquistas com estrelas.
+- 💗 Criar uma experiência acolhedora e divertida.
+
+---
+
+## 🐱 Personagens
+
+### Mimi
+
+A Mimi é a mascote do jogo.
+
+Ela acompanha a criança durante toda a aventura, oferecendo incentivo, carinho e celebrações a cada conquista.
+
+---
+
+## 🎨 Estilo visual
+
+- Cozy Pixel Art
+- Paleta em tons pastel
+- Interface inspirada em jogos aconchegantes
+- Animações suaves
+- Experiência pensada para crianças
+
+---
+
+## 🛠 Tecnologias
+
+- React
+- Vite
+- JavaScript
+- CSS3
+- Git
+- GitHub
+
+---
+
+## 🚀 Status do projeto
+
+### ✅ Concluído
+
+- Estrutura inicial
+- Tela inicial
+- Identidade visual
+- Logo oficial
+- Personagem Mimi
+- Organização dos assets
+- Documentação inicial
+- Versionamento com Git
+
+### 🔄 Em desenvolvimento
+
+- Animação da Mimi
+- Primeira atividade de alfabetização
+- Sistema de estrelas
+- Sons
+- Vila dos Gatinhos
+- Sistema de progresso
+
+---
+
+## 📸 Prévia
+
+> Em breve.
+
+---
+
+## 💻 Como executar
+
+```bash
+npm install
+
+npm run dev
+```
+
+---
+
+## 🌸 Desenvolvido por
+
+**Rebecca Bomfim**
+
+Estudante de Engenharia de Software.
+
+Projeto desenvolvido com muito carinho para minha filha Sophia.

@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
 body {
   background: url("/backgrounds/pink-stars-bg.png");
   background-size: cover;
@@ -18,12 +24,10 @@ body {
 }
 
 .app {
-  min-height: 100vh;
-
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 30px;
 }
 
@@ -40,22 +44,21 @@ body {
     0 18px 24px rgba(181, 83, 126, 0.25);
 }
 
-.eyebrow{
-
-  color:#bf678d;
-
-  font-size:16px;
-
-  margin-bottom:20px;
-
+.learning-banner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
 }
 
-.logo{
+.learning-banner-image {
+  width: 270px;
+  height: auto;
+  image-rendering: pixelated;
+}
 
-  display:flex;
-
-  justify-content:center;
-
+.logo {
+  display: flex;
+  justify-content: center;
 }
 
 .logo-image {
@@ -66,12 +69,19 @@ body {
   margin-bottom: 2px;
 }
 
-.mimi{
+.mimi {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 0 rgba(229, 138, 173, 0.32));
+  transition: filter 0.25s ease;
+}
 
-  display:flex;
-
-  justify-content:center;
-
+.mimi:hover {
+  filter:
+    drop-shadow(0 10px 0 rgba(229, 138, 173, 0.32))
+    drop-shadow(0 0 8px rgba(255, 170, 210, 0.55))
+    drop-shadow(0 0 18px rgba(255, 210, 235, 0.35));
 }
 
 .mimi-image {
@@ -80,20 +90,20 @@ body {
   height: auto;
   image-rendering: pixelated;
   margin: 4px 0 12px;
-  filter: drop-shadow(0 10px 0 rgba(229, 138, 173, 0.32));
-  animation: breathe 2.2s infinite ease-in-out;
+  animation:
+    mimi-entry 0.8s ease-out,
+    breathe 2.2s infinite ease-in-out 0.8s;
 }
 
-.message{
+.mimi:hover .mimi-image {
+  scale: 1.03;
+}
 
-  color:#7d355d;
-
-  font-size:40px;
-
-  font-weight:700;
-
-  margin-bottom:8px;
-
+.message {
+  color: #7d355d;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .subtitle {
@@ -110,11 +120,18 @@ body {
   background: transparent;
   cursor: pointer;
   padding: 0;
-  transition: transform 0.08s ease;
+  transition:
+    transform 0.18s ease,
+    filter 0.18s ease;
+}
+
+.play-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.06);
 }
 
 .play-button:active {
-  transform: translateY(6px);
+  transform: translateY(5px) scale(0.98);
 }
 
 .button-image {
@@ -124,65 +141,121 @@ body {
   image-rendering: pixelated;
 }
 
-.play-button:active {
-  transform: translateY(6px);
+@keyframes breathe {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-.button-image {
-  width: 320px;
-  height: auto;
+@keyframes mimi-entry {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+  }
 
-  display: block;
+  60% {
+    opacity: 1;
+    transform: translateY(8px) scale(1.04);
+  }
 
-  image-rendering: pixelated;
+  80% {
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.play-button:hover{
+/* ===========================
+   Responsividade
+=========================== */
 
-  filter:brightness(1.03);
+@media (max-width: 480px) {
+  .app {
+    min-height: 100dvh;
+    padding: 12px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
 
+  .home-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 14px 16px 20px;
+    border-radius: 32px;
+  }
+
+  .learning-banner {
+    margin-bottom: 10px;
+  }
+
+  .learning-banner-image {
+    width: 210px;
+  }
+
+  .logo-image {
+    width: 225px;
+    margin-top: -4px;
+  }
+
+  .mimi-image {
+    width: 195px;
+    margin: 0 0 6px;
+  }
+
+  .message {
+    font-size: 30px;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    margin-bottom: 16px;
+  }
+
+  .play-button {
+    width: 90%;
+    max-width: 280px;
+  }
 }
 
-.play-button:active{
+@media (max-width: 380px) {
+  .app {
+    padding: 10px;
+  }
 
-  transform:translateY(5px);
+  .home-card {
+    padding: 12px 14px 18px;
+    border-radius: 28px;
+  }
 
-  box-shadow:
-      inset 0 2px 0 rgba(255,255,255,.5),
-      0 2px 0 #d86b9a;
+  .learning-banner-image {
+    width: 190px;
+  }
 
-}
+  .logo-image {
+    width: 215px;
+  }
 
-.button-star{
+  .mimi-image {
+    width: 190px;
+  }
 
-  font-size:24px;
+  .message {
+    font-size: 27px;
+  }
 
-}
+  .subtitle {
+    font-size: 16px;
+  }
 
-@keyframes breathe{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-5px);
-
-}
-
-}
-
-.learning-banner{
-    display:flex;
-    justify-content:center;
-    margin-bottom:18px;
-}
-
-.learning-banner-image{
-    width:270px;
-    height:auto;
-    image-rendering:pixelated;
+  .play-button {
+    max-width: 255px;
+  }
 }

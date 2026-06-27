@@ -22,11 +22,11 @@ A partir dessa ideia surgiu a Mimi, a primeira personagem do jogo e guia da aven
 
 ## ✨ Objetivos
 
-- 📖 Auxiliar na alfabetização.
-- 🔤 Trabalhar reconhecimento de letras e palavras.
-- 🧠 Estimular memória e atenção.
-- ⭐ Recompensar conquistas com estrelas.
-- 💗 Criar uma experiência acolhedora e divertida.
+- Auxiliar na alfabetização.
+- Trabalhar reconhecimento de letras e palavras.
+- Estimular memória e atenção.
+- Recompensar conquistas com estrelas.
+- Criar uma experiência acolhedora e divertida.
 
 ---
 
